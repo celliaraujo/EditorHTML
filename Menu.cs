@@ -9,7 +9,28 @@ public static class Menu
         Console.ForegroundColor = ConsoleColor.Black;
 
         DrawScreen(50, 10);
+        WriteOptions();
 
+        var option = short.Parse(Console.ReadLine());
+
+    }
+
+    public static void WriteOptions()
+    {
+        Console.SetCursorPosition(3, 2);
+        Console.WriteLine("Editor HTML");
+        Console.SetCursorPosition(3, 3);
+        Console.WriteLine("============================");
+        Console.SetCursorPosition(3, 4);
+        Console.WriteLine("Selecione uma opção abaixo:");
+        Console.SetCursorPosition(3, 5);
+        Console.WriteLine("[1] Novo Arquivo");
+        Console.SetCursorPosition(3, 6);
+        Console.WriteLine("[2] Abrir");
+        Console.SetCursorPosition(3, 7);
+        Console.WriteLine("[0] Sair");
+        Console.SetCursorPosition(3, 8);
+        Console.Write("Opção: ");
     }
 
     public static void DrawScreen(int width, int height)
@@ -40,8 +61,6 @@ public static class Menu
 
             Console.Write("|\n");
         }
-
-
     }
 
 }
